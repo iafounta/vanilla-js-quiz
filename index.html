@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Quiz-App</title>
+    <link rel="stylesheet" href="src/style.css">
+</head>
+<body>
+<div class="quiz-box">
+    <div id="welcome-container">
+        <h1>
+            Quiz App
+        </h1>
+    </div>
+    <div id="category-selection">
+        <h2>Wähle eine Quizkategorie:</h2>
+        <button class="btn" onclick="startQuiz('Geschichte')">Geschichte</button>
+        <button class="btn" onclick="startQuiz('Geografie')">Geografie</button>
+        <button class="btn" onclick="startQuiz('Sport')">Sport</button>
+        <button class="btn" onclick="startQuiz('Technologie')">Technologie</button>
+    </div>
+
+    <div id="quiz-container">
+        <div id="question"></div>
+        <div id="answer-buttons" class="btn-grid"></div>
+        <button class="btn" id="next-question" onclick="nextQuestion()" style="display: none;">Nächste Frage</button>
+        <div id="lastQuestionResult"></div>
+    </div>
+
+    <div id="user-input">
+        <input type="text" id="username" placeholder="Dein Name">
+        <button class="btn" onclick="saveScore()">Score speichern</button>
+    </div>
+
+    <div id="scoreboards">
+        <h2>Scoreboards</h2>
+        <div>
+            <h3>Geschichte</h3>
+            <table id="scoreboard-Geschichte"></table>
+        </div>
+        <div>
+            <h3>Geografie</h3>
+            <table id="scoreboard-Geografie"></table>
+        </div>
+        <div>
+            <h3>Sport</h3>
+            <table id="scoreboard-Sport"></table>
+        </div>
+        <div>
+            <h3>Technologie</h3>
+            <table id="scoreboard-Technologie"></table>
+        </div>
+
+        <button class="btn" onclick="showStartScreen()">Neues Quiz starten</button>
+    </div>
+
+
+    <script src="src/index.js"></script>
+</div>
+</body>
+</html>

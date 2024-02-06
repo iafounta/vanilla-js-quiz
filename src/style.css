@@ -1,0 +1,193 @@
+body {
+    text-align: center;
+    font-family: 'AlteHaasGroteskRegular', sans-serif;
+    font-size: 16px;
+    background-attachment: fixed;
+
+    /* notepaper background effect */
+    background-image:
+            -webkit-linear-gradient(0deg, transparent 5em, rgba(255,0,0,.2) 0, transparent 5.1em),
+            -webkit-linear-gradient(rgba(0,0,255,.3) 1px, transparent 0);
+    background-image:
+            -moz-linear-gradient(0deg, transparent 5em, rgba(255,0,0,.2) 0, transparent 5.1em),
+            -moz-linear-gradient(rgba(0,0,255,.3) 1px, transparent 0);
+    background-image:
+            -o-linear-gradient(0deg, transparent 5em, rgba(255,0,0,.2) 0, transparent 5.1em),
+            -o-linear-gradient(rgba(0,0,255,.3) 1px, transparent 0);
+    background-image:
+            -ms-linear-gradient(0deg, transparent 5em, rgba(255,0,0,.2) 0, transparent 5.1em),
+            -ms-linear-gradient(rgba(0,0,255,.3) 1px, transparent 0);
+    -webkit-background-size: 100% 2em;
+    -moz-background-size: 100% 2em;
+    background-image:
+            linear-gradient(0deg, transparent 5em, rgba(255,0,0,.2) 0, transparent 5.1em),
+            linear-gradient(rgba(0,0,255,.3) 1px, transparent 0);
+    background-size: 100% 2em;
+}
+
+h2 {
+    font-size: 2.2em;
+}
+
+h1 {
+    font-size: 3.75em;
+}
+
+#welcome-container {
+    margin-bottom: 8px;
+}
+
+#question {
+    margin-bottom: 50px;
+    font-size: 1.875em;
+}
+
+@font-face {
+    font-family: 'AlteHaasGroteskBold';
+    src: url('./assets/fonts/AlteHaasGroteskBold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'AlteHaasGroteskRegular';
+    src: url('./assets/fonts/AlteHaasGroteskRegular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+strong {
+    font-family: 'AlteHaasGroteskBold', sans-serif;
+}
+
+.btn {
+    background-color: #8240FE;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.quiz-box {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-selected {
+    background-color: #AB7EFF;
+    color: white;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+#quiz-container, #user-input, #scoreboards {
+    margin-top: 20px;
+    background-color: #5300A5;
+    color: white;
+    padding: 60px;
+    border-radius: 5px;
+}
+
+#quiz-container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#next-question {
+    margin-top: 50px;
+}
+
+#lastQuestionResult {
+    margin-top: 20px;
+    border-radius: 5px;
+}
+
+.quiz-box #quiz-container .correct {
+    color: #270;
+    background-color: #DFF2BF;
+}
+
+.quiz-box #quiz-container .incorrect {
+    color: #D8000C;
+    background-color: #FFBABA;
+}
+
+.btn-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin: 10px 0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+#category-selection {
+    display: block;
+    background-color: #5300A5;
+    color: white;
+    padding: 60px;
+    border-radius: 5px;
+}
+#user-input{
+    display: none;
+}
+
+@media (max-width: 768px) {
+    h2 {
+        font-size: 1.8em;
+    }
+
+    h1 {
+        font-size: 3em;
+    }
+
+    #question {
+        font-size: 1.5em;
+    }
+
+    .btn-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    h2 {
+        font-size: 1.5em;
+    }
+
+    h1 {
+        font-size: 2.5em;
+    }
+
+    #question {
+        font-size: 1.2em;
+    }
+
+    .btn {
+        padding: 8px 16px;
+    }
+
+    #quiz-container, #category-selection {
+        padding: 30px;
+    }
+}
